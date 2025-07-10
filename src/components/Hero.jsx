@@ -35,7 +35,7 @@ const Hero = () => {
     });
 
     gsap
-      .timeline({
+    .timeline({
         scrollTrigger: {
           trigger: "#hero",
           start: "top top",
@@ -43,20 +43,9 @@ const Hero = () => {
           scrub: true,
         },
       })
-      .to(
-        ".right-leaf",
-        {
-          y: 200,
-        },
-        0
-      )
-      .to(
-        ".left-leaf",
-        {
-          y: -200,
-        },
-        0
-      );
+      .to(".right-leaf", { y: 200 }, 0)
+      .to(".left-leaf", { y: -200 }, 0);
+
     // element to Animate,viewport value
     // when top of video is 50% down the screen animation starts
     const startValue = isMobile ? "top 50%" : "center 60%";

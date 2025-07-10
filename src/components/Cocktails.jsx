@@ -1,4 +1,3 @@
-import React from 'react'
 import { cocktailLists, mockTailLists } from '../../constants'
 import { useGSAP } from '@gsap/react'
 import gsap from "gsap";
@@ -17,9 +16,9 @@ const Cocktails = () => {
         .from('#c-left-leaf',{
             x:-100,y:100
         })
-        .from('#c-right-leaf'),{
+        .from('#c-right-leaf',{
             x:100,y:100
-        }
+        })
     })
   return (
     <section id="cocktails" className='noisy'>
